@@ -8,6 +8,8 @@ A small collection of command-line utilities built while learning Python.
 - 📏 Convert kilometres and miles
 - 📝 Count words and characters
 - 🛡️ Handle invalid numeric input
+- 🧮 Calculator with addition, subtraction, multiplication, and division
+- 🛡️ Handles invalid numbers and division by zero
 
 ## Requirements
 
