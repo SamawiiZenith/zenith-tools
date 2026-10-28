@@ -53,6 +53,35 @@ def text_analyzer():
     print(f"Words: {len(text.split())}")
 
 
+def calculator():
+    print("\nCalculator")
+    print("Operations: +  -  *  /")
+
+    try:
+        first = float(input("Enter the first number: "))
+        operator = input("Choose an operation: ").strip()
+        second = float(input("Enter the second number: "))
+
+        if operator == "+":
+            result = first + second
+        elif operator == "-":
+            result = first - second
+        elif operator == "*":
+            result = first * second
+        elif operator == "/":
+            if second == 0:
+                print("Error: Cannot divide by zero.")
+                return
+            result = first / second
+        else:
+            print("Invalid operation. Use +, -, *, or /.")
+            return
+
+        print(f"Result: {result:g}")
+
+    except ValueError:
+        print("Please enter valid numbers.")
+
 def main():
     while True:
         print("\n" + "=" * 28)
@@ -61,7 +90,8 @@ def main():
         print("1. Temperature converter")
         print("2. Distance converter")
         print("3. Text analyzer")
-        print("4. Exit")
+        print("4. Calculator")
+        print("5. Exit")
 
         choice = input("\nChoose an option: ").strip()
 
@@ -72,10 +102,12 @@ def main():
         elif choice == "3":
             text_analyzer()
         elif choice == "4":
+            calculator()
+        elif choice == "5":
             print("Keep building. See you next time.")
             break
         else:
-            print("Invalid choice. Choose 1, 2, 3, or 4.")
+            print("Invalid choice. Choose 1, 2, 3, 4, or 5.")
 
 
 if __name__ == "__main__":
